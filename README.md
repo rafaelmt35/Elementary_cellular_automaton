@@ -1,16 +1,14 @@
-# elementary_cellular_automaton
+# Elementary Cellular Automaton
 
-A new Flutter project.
+## Home Screen
+<img src="https://user-images.githubusercontent.com/99629720/222895959-b6320043-6a34-4381-bb44-3f755a161d2d.png" width="200" height="400">
 
-## Getting Started
+## TESTING:
+### RULE 110
+<img src="https://user-images.githubusercontent.com/99629720/222896016-c5a3a6eb-ad85-42c3-8ceb-1cd130b688ed.png" width="200" height="400">
 
-This project is a starting point for a Flutter application.
+### RULE 80
+<img src="https://user-images.githubusercontent.com/99629720/222896046-780a1546-09d9-4b59-b335-584c206a1df6.png" width="200" height="400">
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### RULE 5
+<img src="https://user-images.githubusercontent.com/99629720/222896071-0e18c6ca-3a5a-49c5-84a4-c97d3537e5d5.png" width="200" height="400">
