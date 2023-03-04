@@ -72,7 +72,7 @@ class _myAppState extends State<myApp> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.green.shade900,
           title: const Text('Elementary Cellular Automaton'),
         ),
         body: Container(
