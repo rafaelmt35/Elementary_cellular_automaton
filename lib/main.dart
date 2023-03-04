@@ -42,11 +42,8 @@ class _myAppState extends State<myApp> {
       setState(() {});
     });
   }
-
-  List<List> initialIndex = [[]];
-  List indexCoordinates = [];
+  
   List selectedIndex = [];
-  List<TableRow> rows = [];
   List<List<int>> value = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -212,6 +209,8 @@ class _myAppState extends State<myApp> {
     );
   }
 
+
+  //FUNCTION GET NEXT GENERATION
   void getGeneration() {
     //CHANGE RULES TO BINARY
 
@@ -241,13 +240,17 @@ class _myAppState extends State<myApp> {
 
     List newIndex = [];
     int initial = 0;
-    // final reduceSecondsBy = 1;
 
+    //OLD VALUE ASSIGN
     for (int i = 0; i < value.length; i++) {
       oldIndex.add(value[initial][i]);
     }
+
+    //ITERATION 1 - 14 (14x)
     for (int iteration = 1; iteration < oldIndex.length; iteration++) {
+      //INDEXCELL ARRAY PLACE
       for (int indexcell = 0; indexcell < oldIndex.length; indexcell++) {
+        //INDEXCELL FIRST
         if (indexcell == 0) {
           setState(() {
             neighborleft = oldIndex[oldIndex.length - 1];
@@ -266,6 +269,8 @@ class _myAppState extends State<myApp> {
               });
             }
           }
+
+          //INDEXCELL LAST
         } else if (indexcell == oldIndex.length - 1) {
           setState(() {
             neighborleft = oldIndex[oldIndex.length - 1];
@@ -295,6 +300,7 @@ class _myAppState extends State<myApp> {
                 neighborright.toString();
           });
 
+          //ASSIGN NEW VALUE FOR NEXT ROW
           for (var key in dictionaryRules.keys) {
             if (oldRes == key) {
               setState(() {
@@ -308,6 +314,8 @@ class _myAppState extends State<myApp> {
       }
 
       oldIndex.clear();
+
+      //ASSIGN NEW INDEXING ROW , CLEAR OLD VALUE  CHANGE WITH NEW VALUE
       for (int b = 0; b < value.length; b++) {
         newIndex.add(value[iteration][b]);
         setState(() {
@@ -315,18 +323,9 @@ class _myAppState extends State<myApp> {
         });
       }
     }
-
-    // setState(() {
-    //   final seconds = duration.inSeconds - reduceSecondsBy;
-    //   if (seconds < 0) {
-    //     timer!.cancel();
-    //   } else {
-    //     duration = Duration(seconds: seconds);
-
-    //   }
-    // });
   }
 
+  //CLEAR CELLS
   void clear() {
     for (int i = 0; i < value.length; i++) {
       for (int j = 0; j < value.length; j++) {
